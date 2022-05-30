@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-In order to install the needed packages for this project, the "pip3" command
+In order to install the needed packages for this project, the ```pip3``` command
 and the requirements.txt are needed.
 
 ```
@@ -88,3 +88,20 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
+
+
+
+**ngrita**
+*cursiva*
+# titol gran
+## apartats que demana
+### el k crteis tu
+
+perue et surtin funcions coma pytho
+```python3
+def main(): -> rest
+```
+```hola```
+- punt
+
+imatges -- issues --> añadir issue i arrastres al foto on posa write, set crea un link, el copies i enganxes en el readme
