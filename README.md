@@ -1,4 +1,4 @@
-# MetroNyam
+# MetroNyan
 
 This project consists of designing a Telegram bot, which will guide the users
 of said application to the restaurant they decide. The restaurants will be
@@ -79,10 +79,47 @@ You can execute this "find" command with any parameters of your interest, but yo
 This module consists on the following main functions:
 - ```def read_stations()```, that reads the stations from the ```estacions.csv``` and saves the important information in the station's attributes.
 - ```def read_accesses()```, that reads the accesses from the ```accessos.csv``` and saves the important information in the accesses attributes.
-- ```def get_point(str)```, that is an auxiliar function for the previous read ones, and gets the coordinates points in a tuple format from the attribute "geometry"
-- 
+- ```def get_point(str)```, that is an auxiliar function for the previous read ones, and gets the coordinates points in a tuple format from the attribute "geometry".
+- ```def get_metro_graph()```, which creates the metro graph, using some auxiliar functions to create the nodes (stations and accesses) and to create the edges (links, accesses and sections of traintrack).
+- ```def show(g: MetroGraph)```, that shows interactively the respective graph.
+- ```def plot(g: MetroGraph, filename: str)```, that saves in the given file the metro graph with the city map background.
 
- 
+### running the tests:
+The following tests may also help you to check the functionality of this module. You should modify the ```main``` function with the folowing possible applications:
+- to check the ```read_stations```, do as follows:
+```python3
+def main():
+    stations: Stations = read_stations()  # reads the stations
+    for stat in stations:
+        print(stat.NOM_ESTACIO)
+        print(stat.GEOMETRY[0])  # prints the station 'x' coordinate
+        print("--------")
+ ```
+ This will print the stations names, which you can compare with the ones given in the ```.csv```file, and also prints the 'x' coordinate from the station, proving also the effectivity of the function ```get_point```, because of the separation between the coordinates of every station.
+
+- in order to prove the ```read_accesse```, we will procede in the same way:
+```python3
+def main():
+    accesses: Accesses = read_accesses()  # reads the accesses
+    for acc in accesses:
+        print(acc.NOM_ACCES)
+        print(acc.GEOMETRY[1])  #prints the access 'y' coordinate
+        print("--------")
+ ```
+That in this case prints the access name and its 'y' coordinate, proving that the ```get_point``` is also effective in the accesses case.
+
+- To test the ```get_metro_graph()```, it is possible to make prints in the respective auxiliary functions in order to see if the nodes and edges are correctly added, but instead it is easier and more visual to execute directly the ```show```and ```plot```functions, because the graph is totally refelected there. So you could make:
+```python3
+def main():
+    metro = get_metro_graph()  # builds the metro graph
+    show(metro)  # shows interactively the graph
+    plot(metro, 'plot_metro.png')  # saves the graph in the file 'plot_metro.png'
+```
+This will show the graph interactively in an independent window, and after you close that window, the execution will finish and the graph will be saven in the given file.
+
+
+
+
  
 ## Running the tests
 
