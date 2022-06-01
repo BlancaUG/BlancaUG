@@ -18,7 +18,14 @@ and the ```requirements.txt``` are needed.
 
 From the ```.zip``` the following needed files will appear:
 - ```barcelona.grf```, the graph with Barcelona's streets
-- ```restaurants.csv```,```restaestacions.csv,```accessos.csv```, 
+- ```restaurants.csv```,```restaestacions.csv```,```accessos.csv```, that are the data files that contain the information about thes restaurants, stations and accesses respectively.
+- ```restaurants.py```, the module that reads the restaurant's data and searchs it.
+- ```metro.py```, the module that builds the metro graph from the stations and accesses information.
+- ```city.py```, the module that builds and consults the Barcelona's city graph.
+- ```bot.py```, the module that through a telegram bot, it helps usera choose a restaurant and leads them to it.
+- ```requirements.txt```, with the needed installation libraries.
+- ```README.md```
+- ```*.png```, with the attached images of the documentation.
 
 A step by step series of examples that tell you how to get a development env running
 
