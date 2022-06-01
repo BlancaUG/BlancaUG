@@ -60,7 +60,19 @@ def main():
         print(restaurant.addresses_district_name)
         print("--------")
 ```
-like this you can compare with the ```.csv```file and test if the information matches with the one obtained. Yo can access to any restaurant attribute if you want.
+like this you can compare with the ```.csv``` file and test if the information matches with the one obtained (the restaurant's name and district). Yo can access to any restaurant attribute if you want to.
+
+- to check if the ```find``` fucntion works properly, you can try
+```python3
+def main():
+    restaurants: Restaurants = read()  #contains all the bcn restaurants
+    found: Restaurants = find ("retaurant buger example", restaurants)  #contains the burger restaurants located in "l'Eixample", althought the serached parameters are writed incorrectly.
+    for restaurant in found:
+        print(restaurant.name)  #it should return restaurants related with burgers
+        print(restaurant.addresses_district_name)  # it chould return "Eixample"
+        print("--------")
+```
+You can execute this "find" command with any parameters of your interest, but you have to take into an account that some errors can be made due to the fact that the fuzzysearch also looks for near matches from the word, and sometimes this leads to restaurants that do not have the searched parameter but some similar and unrelated one. 
 
 
 ## Metro.py:
