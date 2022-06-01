@@ -34,13 +34,37 @@ in order to install the libraries contained in ```requirements.txt```, the follo
  It is important to know that this command has to be executed in the same directory where the ```requirements.txt``` is saven, and it installs in the system the packages annoted in this file.
  
  EXCEPTION: the ```osmnx```library is not included inside this file, because it has different ways to install it, depending on your operating system (it sometimes causes problems). You can install it as follows:
- - ```pip3 install osmnx```, if no error is shown this is the easiest and typical way to install it.
+ - ```$ pip3 install osmnx```, if no error is shown this is the easiest and typical way to install it.
  - if the above command did not work, you can try to install it with conda, with
  ```python3
  $ conda config --prepend channels conda-forge
  $ conda create -n ox --strict-channel-priority osmnx
 ```
+- you may also try to install an extra library, with ```$ brew install spatialindex```for Mac users or ```$ apt install libspatialindex-dev``` for Ubuntu.
  It is also important to remark that some of the imported libraries in the codes depend on the python version that is used. This is the case of ```TypeAlias```. We have imported it from ```typing_extensions```, but this is only accepted with python versions 3.9 or older. With posterior verisons, the import should be from ```typing```.
+ 
+## Restaurants.py:
+The principal functions from this module are the following ones:
+- ```def read()```, that reads the data from the ```restaurants.csv``` and saves the remarkable one in its respective Restaurant attributes. It returns the posterior created restaurants list.
+- ```def find(query : str, restaurants : Restaurants)```, that searches the restaurants that contain the specified query from the whole list. It follows a multiple and fuzzysearch at once, because it allows the user to search more than one word at a time and all of them have to appear in the attributes, but it also allows to search similar texts in case that the searched parameter and the found one differ from one error.
+
+### running the tests:
+there are some tests that can be done in order to understand the full application of this module, and getting familiar with it:
+Examples: you need to modify the ```main```function in order to execute the tests
+- to check if the ```read``` function runs correctly, you can try
+```python3
+def main():
+    restaurants: Restaurants = read()  #contains all the bcn restaurants
+    for restaurant in restaurants:
+        print(restaurant.name)
+        print(restaurant.addresses_district_name)
+        print("--------")
+```
+like this you can compare with the ```.csv```file and test if the information matches with the one obtained. Yo can access to any restaurant attribute if you want.
+
+
+## Metro.py:
+
  
  
 ## Running the tests
