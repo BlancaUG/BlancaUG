@@ -10,8 +10,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-In order to install the needed packages for this project, the ```pip3``` command
-and the ```requirements.txt``` are needed.
+In order to install the needed packages for this project, the ```pip3``` command (to install)
+and the ```.zip``` (containing the files and codes) are needed.
 
 
 ### Installing
@@ -31,7 +31,17 @@ in order to install the libraries contained in ```requirements.txt```, the follo
 ```python3
  #> pip install -r requirements.txt
  ```
- It is important to know that this command has to be executed in the same directory where the ```requirements.txt``` is saven, and it installs in the system or in the activated virtualenv the packages annoted in this file.
+ It is important to know that this command has to be executed in the same directory where the ```requirements.txt``` is saven, and it installs in the system the packages annoted in this file.
+ 
+ EXCEPTION: the ```osmnx```library is not included inside this file, because it has different ways to install it, depending on your operating system (it sometimes causes problems). You can install it as follows:
+ - ```pip3 install osmnx```, if no error is shown this is the easiest and typical way to install it.
+ - if the above command did not work, you can try to install it with conda, with
+ ```python3
+conda config --prepend channels conda-forge
+conda create -n ox --strict-channel-priority osmnx
+```
+ It is also important to remark that some of the imported libraries in the codes depend on the python version that is used. This is the case of ```TypeAlias```. We have imported it from ```typing_extensions```, but is only accepted with python versions 3.9 or older. With posterior verisons, the import should be from ```typing```.
+ 
  
 
 A step by step series of examples that tell you how to get a development env running
