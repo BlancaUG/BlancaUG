@@ -126,6 +126,7 @@ The principal functions from this module are:
 - ```def find_path(ox_g: OsmnxGraph, g: CityGraph, src: Coord, dst: Coord)```, that gives the shortest path from the source to the destiny, taking into an account the spent time.
 - ```def show(g: CityGraph)```, that as in the case of the ```metro.py```, shows interactively the city graph in an independent window.
 - ```def plot(g: CityGraph, filename: str)```, which saves the graph as an image in the given file.
+- ```def plot_path (g: CityGraph, p: Path, filename: str)```, that saves in the file the found path between the source and the destiny.
 
 
 
