@@ -47,6 +47,7 @@ in order to install the libraries contained in ```requirements.txt```, the follo
 The principal functions from this module are the following ones:
 - ```def read()```, that reads the data from the ```restaurants.csv``` and saves the remarkable one in its respective Restaurant attributes. It returns the posterior created restaurants list.
 - ```def find(query : str, restaurants : Restaurants)```, that searches the restaurants that contain the specified query from the whole list. It follows a multiple and fuzzysearch at once, because it allows the user to search more than one word at a time and all of them have to appear in the attributes, but it also allows to search similar texts in case that the searched parameter and the found one differ from one error.
+- this module also uses the class ```Restaurant``` to treat every given restaurant.
 
 ### running the tests:
 there are some tests that can be done in order to understand the full application of this module, and getting familiar with it:
@@ -83,6 +84,7 @@ This module consists on the following main functions:
 - ```def get_metro_graph()```, which creates the metro graph, using some auxiliar functions to create the nodes (stations and accesses) and to create the edges (links, accesses and sections of traintrack).
 - ```def show(g: MetroGraph)```, that shows interactively the respective graph.
 - ```def plot(g: MetroGraph, filename: str)```, that saves in the given file the metro graph with the city map background.
+- This module also works with the classes ```Station```, ```Access``` and ```Edge```, in order to treat the stations, accesses and the needed edge's info attribute.
 
 ### running the tests:
 The following tests may also help you to check the functionality of this module. You should modify the ```main``` function with the folowing possible applications:
@@ -117,7 +119,10 @@ def main():
 ```
 This will show the graph interactively in an independent window, and after you close that window, the execution will finish and the graph will be saven in the given file.
 
-
+## City.py:
+The principal functions from this module are:
+- ```def get_osmnx_graph()```, that creates Barcelona's street graph with the ```osmnx``` module, while at the same time uses the auxiliar functions ```def load_osmnx_graph(filename: str)``` and ```def save_osmnx_graph(g: OsmnxGraph, filename: str)``` in order to load the once created graph and save the graph respectively.
+- ```def build_city_graph(g1: OsmnxGraph, g2: MetroGraph) ```, which 
 
 
  
