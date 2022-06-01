@@ -76,6 +76,11 @@ You can execute this "find" command with any parameters of your interest, but yo
 
 
 ## Metro.py:
+This module consists on the following main functions:
+- ```def read_stations()```, that reads the stations from the ```estacions.csv``` and saves the important information in the station's attributes.
+- ```def read_accesses()```, that reads the accesses from the ```accessos.csv``` and saves the important information in the accesses attributes.
+- ```def get_point(str)```, that is an auxiliar function for the previous read ones, and gets the coordinates points in a tuple format from the attribute "geometry"
+- 
 
  
  
