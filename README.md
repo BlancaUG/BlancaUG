@@ -29,7 +29,7 @@ From the ```.zip``` the following needed files will appear:
 
 in order to install the libraries contained in ```requirements.txt```, the following command is needed:
 ```python3
- #> pip install -r requirements.txt
+ $ pip install -r requirements.txt
  ```
  It is important to know that this command has to be executed in the same directory where the ```requirements.txt``` is saven, and it installs in the system the packages annoted in this file.
  
@@ -37,29 +37,12 @@ in order to install the libraries contained in ```requirements.txt```, the follo
  - ```pip3 install osmnx```, if no error is shown this is the easiest and typical way to install it.
  - if the above command did not work, you can try to install it with conda, with
  ```python3
-conda config --prepend channels conda-forge
-conda create -n ox --strict-channel-priority osmnx
+ $ conda config --prepend channels conda-forge
+ $ conda create -n ox --strict-channel-priority osmnx
 ```
- It is also important to remark that some of the imported libraries in the codes depend on the python version that is used. This is the case of ```TypeAlias```. We have imported it from ```typing_extensions```, but is only accepted with python versions 3.9 or older. With posterior verisons, the import should be from ```typing```.
+ It is also important to remark that some of the imported libraries in the codes depend on the python version that is used. This is the case of ```TypeAlias```. We have imported it from ```typing_extensions```, but this is only accepted with python versions 3.9 or older. With posterior verisons, the import should be from ```typing```.
  
  
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Running the tests
 
 Explain how to run the automated tests for this system
