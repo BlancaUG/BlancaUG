@@ -187,7 +187,7 @@ the tests from this module need to be done with the
 
 --------------------------------- 
 
-[Image of the city graph](https://raw.githubusercontent.com/ BlancaUG/MetroNyan/master/bcn.png)
+[Image of the city graph](https://raw.githubusercontent.com/BlancaUG/MetroNyan/master/bcn.png)
 ![Screenshot](city.png)
 
 ## Authors
