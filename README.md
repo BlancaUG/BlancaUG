@@ -122,7 +122,7 @@ def main():
 This will show the graph interactively in an independent window, and after you close that window, the execution will finish and the graph will be saven in the given file.
 
 ## City.py:
-The principal functions from this module are:
+This module needs to import the previous one, ```metro.py```.The principal functions from this module are:
 - ```def get_osmnx_graph()```, that creates Barcelona's street graph with the ```osmnx``` module, while at the same time uses the auxiliar functions ```load_osmnx_graph``` and ```save_osmnx_graph``` in order to load the once created graph and save the graph respectively.
 - ```def build_city_graph(g1: OsmnxGraph, g2: MetroGraph) ```, which builds the city graph from the given metro and street graph. It uses some auxiliar functions such as ```aggregate_metro_graph```, ```aggregate_street_graph```and ```aggregate_union_edges```.
 - ```def find_path(ox_g: OsmnxGraph, g: CityGraph, src: Coord, dst: Coord)```, that gives the shortest path from the source to the destiny, regarding the spent time.
@@ -170,6 +170,25 @@ The plot path should let to something like this:
 ✅AÑADIR IMAGENES DEL PLOT PATH DE ESTA RUTA
 
 ## Bot.py:
+The objective of this final module is to interact with the telegram users, helping to guide them to their chosen restaurant, based on the query/s. That's why this module combines the three others: first, it uses the ```restaurants.py``` to read the intial list of all the restaurants from barcelona, and then to find the restaurant based on every user query/s (with multiple and fuzzysearch). It also uses the module ```metro.py``` to get the metro graph from the city (based on the accesses and station data files). Lastly, it utilizes the ```city.py``` to get the city graph (obtained from the metro and street graphs) and to find the shortest path between two given coordinates (and also its plot).
+The bot waits for the different users to connect, and it is important to remark that the petitions and conversations from the users cannot be mixed! or else it will result in chaos.
+The module consists on the definition and implementation of different commands:
+-```/start```: it starts a conversation with the bot, that introiduces its purposes. It also indicates the access to the ```/help```command, so that the users take it into an account.
+-```/help```:
+
+
+
+/start: inicia la conversa.
+
+/help: ofereix ajuda sobre les comandes disponibles.
+
+/author: mostra el nom dels autors del projecte.
+
+/find <query>: Cerca quins restaurants satisfan la cerca i n'escriu una llista numerada (12 elements com a molt). Per exemple: /find pizza.
+
+/info <numero>: mostra la informació sobre el restaurant especificat pel seu número (triat de la darrera llista numerada obtinguda amb /find).
+
+/guide <numero>: mostra un mapa amb el camí més curt per anar del punt actual on es troba l'usuari al restaurant especificat pel seu número (triat de la darrera llista numerada obtinguda amb /find).
 
 
 ### running the tests:
