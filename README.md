@@ -14,7 +14,7 @@ In order to install the needed packages for this project, the ```pip3``` command
 and the ```.zip``` (containing the files and codes) are needed.
 
 
-### Installing+
+### Installing
 
 From the ```.zip``` the following needed files will appear:
 - ```barcelona.grf```, the graph with Barcelona's streets
@@ -181,13 +181,11 @@ The module consists on the definition and implementation of different commands:
 -  ```/guide <number>```: shows the map with the shortest path between the las sended location from the user to its specified restaurant by the index number (the index corresponds to the list obtained with ```/find```)
 
 
-
-
 ### running the tests:
+the tests from this module need to be done with the 
 
 
 --------------------------------- 
-
 
 
 ## Authors
@@ -196,19 +194,6 @@ The module consists on the definition and implementation of different commands:
 * **Blanca Unanue Gambra**
 
 
-
 ## Acknowledgments
 
-* Inspiration: we have been inspired by the introduction and explanation of the ```MetroNyan``` practice. We have also taken some ideas to treat the modules from it (for example the relation beetween the modules). 
-
-
-
-
-
-
-
-
-
-imatges -- issues --> añadir issue i arrastres al foto on posa write, set crea un link, el copies i enganxes en el readme
- 
-
+* Inspiration: we have been inspired by the introduction and explanation of the ```MetroNyan``` practice, done by Emma Rollon and Jordi Petit. We have also taken some ideas to treat the modules from it (for example the relation beetween the modules). 
