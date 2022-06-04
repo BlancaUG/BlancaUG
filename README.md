@@ -266,3 +266,5 @@ def main(): -> rest
 - punt
 
 imatges -- issues --> añadir issue i arrastres al foto on posa write, set crea un link, el copies i enganxes en el readme
+ 
+ jsnjndindpcojpdoc
