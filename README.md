@@ -131,13 +131,41 @@ The principal functions from this module are:
 - This module also works with the classes ```Edge```, in order to treat the needed edge's info attribute.
 
 ### running the tests:
-The following tests may help you check the action of this module. You can modify the ```main``` function with the following possible applications:
+The following tests may help you check the actions of this module. You can modify the ```main``` function with the following possible applications:
 - to check the ```get_osmnx_graph```, do:
 ```python3
 def main():
     streets = get_osmnx_graph()
 ```
 This should create in your execution folder a file called ```street_graph.pickle``` (which proves that the ```save_osmnx_graph```function works correctly). The first time you prove this, it will take a long time to charge the graph, but the next ones it will be an inmediate operation, and this would prove that the ```load_osmnx_graph``` works correctly.
+
+- to find if the ```build_city_graph``` is well implemented, we recommend you to prove it at the same time as the ```show``` and ```plot``` functions, and compare the result with the given images, in order to see wether the nodes and edges have been correctly added and connected. 
+```python3
+def main():
+    streets = get_osmnx_graph()  # previously saven street graph
+    city = build_city_graph(streets, metro)
+    show(city)
+    plot(city, 'city_plot.png')
+```
+Which should show the following:
+✅AÑADIR IMAGENES DEL SHOW Y EL PLOT DEL CITY
+
+- Finally, you could test the functions related to the path all at once, cahnging the coordinates as you wish. For example, the following ```main``` will check the path from the "Frankfurt Pedralbes" to the "Sagrada Familia":
+```python3
+def main():
+    streets = get_osmnx_graph()  # previously saven street graph
+    city = build_city_graph(streets, metro)
+    frkt_coords: Coord = (2.1128, 41.38715)
+    sgFam_coords: Coord = (2.174347, 41.403561)
+    # shortest path from the frankfurt to the sagrada familia
+    shortest_path: Path = find_path(streets, city, frkt_coords, sgFam_coords)
+    # prints in the shell the spent time and travelled distance in the journy
+    print(path_time_dist(city, shortest_path))
+    # saves an image of the path route in the given file
+    plot_path(city, shortest_path, 'Frkt_SgFam_path.png')
+```
+The plot path should let to something like this:
+✅AÑADIR IMAGENES DEL PLOT PATH DE ESTA RUTA
 
 
  
