@@ -173,14 +173,14 @@ The plot path should let to something like this:
 The objective of this final module is to interact with the telegram users, helping to guide them to their chosen restaurant, based on the query/s. That's why this module combines the three others: first, it uses the ```restaurants.py``` to read the intial list of all the restaurants from barcelona, and then to find the restaurant based on every user query/s (with multiple and fuzzysearch). It also uses the module ```metro.py``` to get the metro graph from the city (based on the accesses and station data files). Lastly, it utilizes the ```city.py``` to get the city graph (obtained from the metro and street graphs) and to find the shortest path between two given coordinates (and also its plot).
 The bot waits for the different users to connect, and it is important to remark that the petitions and conversations from the users cannot be mixed! or else it will result in chaos.
 The module consists on the definition and implementation of different commands:
--```/start```: it starts a conversation with the bot, that introiduces its purposes. It also indicates the access to the ```/help```command, so that the users take it into an account.
--```/help```: 
+- ```/start```: it starts a conversation with the bot, that introiduces its purposes. It also indicates the access to the ```/help```command, so that the users take it into an account.
+- ```/help```: it offers help regarding the available commands, for the user to find the bot options and capacities.
 
 
 
-/start: inicia la conversa.
 
-/help: ofereix ajuda sobre les comandes disponibles.
+
+
 
 /author: mostra el nom dels autors del projecte.
 
@@ -195,31 +195,6 @@ The module consists on the definition and implementation of different commands:
 
 
 --------------------------------- 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-
 
 
 
@@ -232,7 +207,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Acknowledgments
 
-* Inspiration: we have been inspired by the introduction and explanation of the ```MetroNyan``` practice. We have also taken some ideas to treat the modules from it (for example the relation beetween the modules).
+* Inspiration: we have been inspired by the introduction and explanation of the ```MetroNyan``` practice. We have also taken some ideas to treat the modules from it (for example the relation beetween the modules). 
 
 
 
@@ -240,19 +215,8 @@ Add additional notes about how to deploy this on a live system
 
 
 
-**ngrita**
-*cursiva*
-# titol gran
-## apartats que demana
-### el k crteis tu
 
-perue et surtin funcions coma pytho
-```python3
-def main(): -> rest
-```
-```hola```
-- punt
 
 imatges -- issues --> añadir issue i arrastres al foto on posa write, set crea un link, el copies i enganxes en el readme
  
- jsnjndindpcojpdoc
+
