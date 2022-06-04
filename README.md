@@ -177,7 +177,7 @@ The module consists on the definition and implementation of different commands:
 - ```/help```: it offers help regarding the available commands, for the user to find the bot options and capacities.
 - ```/author```: shows the name of the authors of this project.
 - ```/find <query> ```: searches which restaurants satisfy the query/s from the users, following a multiple and fuzzysearch. It then writes a numerated list for first twelve ones maximum.
--  ```/info <number>```: shows the information about the
+-  ```/info <number>```: shows the information about the specified restaurant
 
 
 
