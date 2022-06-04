@@ -178,17 +178,17 @@ The module consists on the definition and implementation of different commands:
 
 
 
--```/start```: inicia la conversa.
+- ```/start```: inicia la conversa.
 
--```/help```: ofereix ajuda sobre les comandes disponibles.
+- ```/help```: ofereix ajuda sobre les comandes disponibles.
 
--```/author```: mostra el nom dels autors del projecte.
+- ```/author```: mostra el nom dels autors del projecte.
 
--```/find <query>```: Cerca quins restaurants satisfan la cerca i n'escriu una llista numerada (12 elements com a molt). Per exemple: /find pizza.
+- ```/find <query>```: Cerca quins restaurants satisfan la cerca i n'escriu una llista numerada (12 elements com a molt). Per exemple: /find pizza.
 
--```/info <number>```: mostra la informació sobre el restaurant especificat pel seu número (triat de la darrera llista numerada obtinguda amb /find).
+- ```/info <number>```: mostra la informació sobre el restaurant especificat pel seu número (triat de la darrera llista numerada obtinguda amb /find).
 
--```/guide <number>```: mostra un mapa amb el camí més curt per anar del punt actual on es troba l'usuari al restaurant especificat pel seu número (triat de la darrera llista numerada obtinguda amb /find).
+- ```/guide <number>```: mostra un mapa amb el camí més curt per anar del punt actual on es troba l'usuari al restaurant especificat pel seu número (triat de la darrera llista numerada obtinguda amb /find).
 
 
 ### running the tests:
