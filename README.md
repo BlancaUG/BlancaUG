@@ -175,16 +175,11 @@ The bot waits for the different users to connect, and it is important to remark 
 The module consists on the definition and implementation of different commands:
 - ```/start```: it starts a conversation with the bot, that introiduces its purposes. It also indicates the access to the ```/help```command, so that the users take it into an account.
 - ```/help```: it offers help regarding the available commands, for the user to find the bot options and capacities.
+- ```/author```: shows the name of the authors of this project.
+- ```/find <query> ```: searches which restaurants satisfy the query/s from the users, following a multiple and fuzzysearch. It then writes a numerated list for first twelve ones maximum.
+-  ```/info <number>```: shows the information about the
 
 
-
-
-
-
-
-/author: mostra el nom dels autors del projecte.
-
-/find <query>: Cerca quins restaurants satisfan la cerca i n'escriu una llista numerada (12 elements com a molt). Per exemple: /find pizza.
 
 /info <numero>: mostra la informació sobre el restaurant especificat pel seu número (triat de la darrera llista numerada obtinguda amb /find).
 
