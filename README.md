@@ -121,13 +121,23 @@ This will show the graph interactively in an independent window, and after you c
 
 ## City.py:
 The principal functions from this module are:
-- ```def get_osmnx_graph()```, that creates Barcelona's street graph with the ```osmnx``` module, while at the same time uses the auxiliar functions ```def load_osmnx_graph(filename: str)``` and ```def save_osmnx_graph(g: OsmnxGraph, filename: str)``` in order to load the once created graph and save the graph respectively.
-- ```def build_city_graph(g1: OsmnxGraph, g2: MetroGraph) ```, which builds the city graph from the given metro and street graph. It uses some auxiliar functions such as ```add_street_graph```and ```add_union_edges```.
-- ```def find_path(ox_g: OsmnxGraph, g: CityGraph, src: Coord, dst: Coord)```, that gives the shortest path from the source to the destiny, taking into an account the spent time.
+- ```def get_osmnx_graph()```, that creates Barcelona's street graph with the ```osmnx``` module, while at the same time uses the auxiliar functions ```load_osmnx_graph``` and ```save_osmnx_graph``` in order to load the once created graph and save the graph respectively.
+- ```def build_city_graph(g1: OsmnxGraph, g2: MetroGraph) ```, which builds the city graph from the given metro and street graph. It uses some auxiliar functions such as ```aggregate_metro_graph```, ```aggregate_street_graph```and ```aggregate_union_edges```.
+- ```def find_path(ox_g: OsmnxGraph, g: CityGraph, src: Coord, dst: Coord)```, that gives the shortest path from the source to the destiny, regarding the spent time.
+- ```def path_time_dist(g: CityGraph, p: Path)```, that calculates the sepent time and the traveled distance from a given path.
 - ```def show(g: CityGraph)```, that as in the case of the ```metro.py```, shows interactively the city graph in an independent window.
-- ```def plot(g: CityGraph, filename: str)```, which saves the graph as an image in the given file.
+- ```def plot(g: CityGraph, filename: str)```, which saves the city graph as an image in the given file.
 - ```def plot_path (g: CityGraph, p: Path, filename: str)```, that saves in the file the found path between the source and the destiny.
+- This module also works with the classes ```Edge```, in order to treat the needed edge's info attribute.
 
+### running the tests:
+The following tests may help you check the action of this module. You can modify the ```main``` function with the following possible applications:
+- to check the ```get_osmnx_graph```, do:
+```python3
+def main():
+    streets = get_osmnx_graph()
+```
+This should create in your execution folder a file called ```street_graph.pickle``` (which proves that the ```save_osmnx_graph```function works correctly). The first time you prove this, it will take a long time to charge the graph, but the next ones it will be an inmediate operation, and this would prove that the ```load_osmnx_graph``` works correctly.
 
 
  
