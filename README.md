@@ -14,7 +14,7 @@ In order to install the needed packages for this project, the ```pip3``` command
 and the ```.zip``` (containing the files and codes) are needed.
 
 
-### Installing
+### Installing+
 
 From the ```.zip``` the following needed files will appear:
 - ```barcelona.grf```, the graph with Barcelona's streets
@@ -174,21 +174,21 @@ The objective of this final module is to interact with the telegram users, helpi
 The bot waits for the different users to connect, and it is important to remark that the petitions and conversations from the users cannot be mixed! or else it will result in chaos.
 The module consists on the definition and implementation of different commands:
 -```/start```: it starts a conversation with the bot, that introiduces its purposes. It also indicates the access to the ```/help```command, so that the users take it into an account.
--```/help```:
+-```/help```: 
 
 
 
-- ```/start```: inicia la conversa.
+/start: inicia la conversa.
 
-- ```/help```: ofereix ajuda sobre les comandes disponibles.
+/help: ofereix ajuda sobre les comandes disponibles.
 
-- ```/author```: mostra el nom dels autors del projecte.
+/author: mostra el nom dels autors del projecte.
 
-- ```/find <query>```: Cerca quins restaurants satisfan la cerca i n'escriu una llista numerada (12 elements com a molt). Per exemple: /find pizza.
+/find <query>: Cerca quins restaurants satisfan la cerca i n'escriu una llista numerada (12 elements com a molt). Per exemple: /find pizza.
 
-- ```/info <number>```: mostra la informació sobre el restaurant especificat pel seu número (triat de la darrera llista numerada obtinguda amb /find).
+/info <numero>: mostra la informació sobre el restaurant especificat pel seu número (triat de la darrera llista numerada obtinguda amb /find).
 
-- ```/guide <number>```: mostra un mapa amb el camí més curt per anar del punt actual on es troba l'usuari al restaurant especificat pel seu número (triat de la darrera llista numerada obtinguda amb /find).
+/guide <numero>: mostra un mapa amb el camí més curt per anar del punt actual on es troba l'usuari al restaurant especificat pel seu número (triat de la darrera llista numerada obtinguda amb /find).
 
 
 ### running the tests:
@@ -219,36 +219,24 @@ Give an example
 
 Add additional notes about how to deploy this on a live system
 
-## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
 * **Xiao Segarra Banegas** 
 * **Blanca Unanue Gambra**
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Inspiration: we have been inspired by the introduction and explanation of the ```MetroNyan``` practice. We have also taken some ideas to treat the modules from it (for example the relation beetween the modules).
+
+
+
+
 
 
 
