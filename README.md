@@ -29,7 +29,7 @@ From the ```.zip``` the following needed files will appear:
 
 in order to install the libraries contained in ```requirements.txt```, the following command is needed:
 ```python3
- $ pip install -r requirements.txt
+ $ pip3 install -r requirements.txt
  ```
  It is important to know that this command has to be executed in the same directory where the ```requirements.txt``` is saven, and it installs in the system the packages annoted in this file.
  
@@ -67,10 +67,12 @@ like this you can compare with the ```.csv``` file and test if the information m
 ```python3
 def main():
     restaurants: Restaurants = read()  #contains all the bcn restaurants
-    found: Restaurants = find ("retaurant buger example", restaurants)  #contains the burger restaurants located in "l'Eixample", althought the serached parameters are writed incorrectly.
+    found: Restaurants = find ("retaurant buger example", restaurants)  
+    #contains the burger restaurants located in "l'Eixample", althought 
+    # the serached parameters are writed incorrectly.
     for restaurant in found:
         print(restaurant.name)  #it should return restaurants related with burgers
-        print(restaurant.addresses_district_name)  # it chould return "Eixample"
+        print(restaurant.addresses_district_name)  # it should return "Eixample"
         print("--------")
 ```
 You can execute this "find" command with any parameters of your interest, but you have to take into an account that some errors can be made due to the fact that the fuzzysearch also looks for near matches from the word, and sometimes this leads to restaurants that do not have the searched parameter but some similar and unrelated one. 
@@ -167,8 +169,13 @@ def main():
 The plot path should let to something like this:
 ✅AÑADIR IMAGENES DEL PLOT PATH DE ESTA RUTA
 
+## Bot.py:
 
- 
+
+### running the tests:
+
+
+--------------------------------- 
 ## Running the tests
 
 Explain how to run the automated tests for this system
